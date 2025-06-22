@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Dashboard Kost</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .dashboard {
+      text-align: center;
+    }
+
+    h1 {
+      color: #f9f5f7;
+    }
+
+    .menu {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .menu a {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #2f74e2;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    .menu a:hover {
+      background-color: #2f74e2;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <h1>Selamat Datang Di Kost Mirna Geulis</h1>
+    <div class="menu">
+      <a href="data penghuni.html">📋 Data Penghuni</a>
+      <a href="informasi kamar.html">🛏 Informasi Kamar</a>
+      <a href="cek tagihan.html">💰 Cek Tagihan</a>
+      <a href="jadwal pembayaran.html">📅 Jadwal Pembayaran</a>
+      <a href="laporan keluhan.html">📨 Laporan Keluhan</a>
+      <a href="#" onclick="logout()">🚪 Logout</a>
+    </div>
+  </div>
+
+  <script>
+    function logout() {
+      localStorage.removeItem("user"); // hapus data login
+      alert("Anda telah logout.");
+      window.location.href = "login.html"; // kembali ke halaman login
+    }
+  </script>
+</body>
+</html>
